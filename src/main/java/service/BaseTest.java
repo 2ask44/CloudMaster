@@ -8,7 +8,7 @@ public class BaseTest {
 
     @BeforeSuite
     public void getToken() {
-        System.out.println(steps.getToken());
+        System.out.println(steps.authorization());
     }
 
 

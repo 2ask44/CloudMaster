@@ -5,7 +5,5 @@ public class AuthorizationTest extends BaseTest {
 
     @Test()
     public void authorizationTest() {
-
-        //  System.out.println("Тест один");
-    }
+            }
 }

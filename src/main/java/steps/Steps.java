@@ -10,11 +10,10 @@ public class Steps {
     public static String sessionToken;
 
     @Step("Получение sessionToken")
-    public String getToken() {
+    public String authorization() {
         String str = api.login("YWRtaW5AZGVtby5jbG91ZG1hc3Rlci5ydTpDbDB1ZG1Ac3Rlcg==").asString();
         JsonPath jsonPath = JsonPath.from(str);
         ServiceCodeResponse serviceCodeResponse = jsonPath.getObject("$", ServiceCodeResponse.class);
         return sessionToken = serviceCodeResponse.getSessionToken();
-
     }
 }
