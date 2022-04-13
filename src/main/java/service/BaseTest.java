@@ -1,16 +1,15 @@
 package service;
 
-import api.Api;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
-
-import javax.xml.ws.Response;
+import steps.Steps;
 
 public class BaseTest {
-    Api api = new Api();
-    //public static String sessionToken;
+    public Steps steps = new Steps();
+
     @BeforeSuite
     public void getToken() {
-        api.login("YWRtaW5AZGVtby5jbG91ZG1hc3Rlci5ydTpDbDB1ZG1Ac3Rlcg==");
-      }
+        System.out.println(steps.getToken());
+    }
+
+
 }
